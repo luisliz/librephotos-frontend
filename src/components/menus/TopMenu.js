@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { push } from "react-router-redux";
 import {
   Button,
-  Divider,
   Dropdown,
   Header,
   Icon,
@@ -229,6 +228,7 @@ class TopMenu extends Component {
     }
   
     handleChange(e, d) {
+      this.setState('searchText')
       this.state.searchText = d.value;
       this.filterSearchSuggestions();
     }
