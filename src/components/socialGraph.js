@@ -3,6 +3,7 @@ import Dimensions from 'react-dimensions'
 import {connect} from "react-redux";
 import {fetchSocialGraph} from '../actions/peopleActions'
 import {ForceGraph2D, ForceGraph3D} from "react-force-graph";
+import {Loader} from "semantic-ui-react";
 
 export class SocialGraph extends Component {
     componentWillMount() {
@@ -12,9 +13,11 @@ export class SocialGraph extends Component {
     }
 
     render() {
+        var width = this.props.containerWidth
         const data = this.props.socialGraph;
-        return (
-            <ForceGraph2D
+        var graph;
+        if (this.props.fetched && this.props.socialGraph.nodes.length > 0) {
+            graph = <ForceGraph2D
                 graphData={data}
                 nodeAutoColorBy="group"
                 nodeCanvasObject={(node, ctx, globalScale) => {
@@ -33,6 +36,16 @@ export class SocialGraph extends Component {
                     ctx.fillText(label, node.x, node.y);
                 }}
             />
+        }
+        else {
+            graph = <Loader active>Fetching Social Graph</Loader>
+        }
+
+        return (
+            <div>
+                {graph}
+            </div>
+
         )
 
         // var width = this.props.containerWidth
@@ -58,15 +71,7 @@ export class SocialGraph extends Component {
         //     width: width
         // }
         //
-        // if (this.props.fetched && this.props.socialGraph.nodes.length > 0) {
-        //     console.log(this.props.socialGraph)
-        // 	var graph = <Graph id='social-graph'
-        // 			config={myConfig}
-        // 			data={this.props.socialGraph}/>
-        // }
-        // else {
-        // 	var graph = <Loader active>Fetching Social Graph</Loader>
-        // }
+
         //
         // console.log(this.props)
         // return (
