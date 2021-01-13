@@ -6,7 +6,8 @@
 ## Issues in this version 
 
 - Placetree is not working 
-
+- Lost Highlighting with new force (have to adapt [this code](https://github.com/vasturiano/react-force-graph/blob/master/example/highlight/index.html))
+  - Changed to react-force-graph because react-d3-graph has [issues with d3 v6](https://github.com/danielcaldas/react-d3-graph/issues/365) and couldn't find work around
 ## What is it?
 
 - Self hosted Google Photos clone, with a slight focus on cool graphs
