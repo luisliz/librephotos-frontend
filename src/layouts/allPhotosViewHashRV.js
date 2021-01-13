@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import 'react-virtualized/styles.css'; // only needs to be imported once
 import { connect } from "react-redux";
 import { fetchDateAlbumsPhotoHashList } from '../actions/albumsActions'
-import _ from 'lodash'
+// import _ from 'lodash'
 import { PhotoListView } from './ReusablePhotoListView'
 
 
-var TOP_MENU_HEIGHT = 55 // don't change this
-var LEFT_MENU_WIDTH = 85 // don't change this
+// var TOP_MENU_HEIGHT = 55 // don't change this
+// var LEFT_MENU_WIDTH = 85 // don't change this
 var SIDEBAR_WIDTH = 85
-var TIMELINE_SCROLL_WIDTH = 0
-var DAY_HEADER_HEIGHT = 70
+// var TIMELINE_SCROLL_WIDTH = 0
+// var DAY_HEADER_HEIGHT = 70
 
-if (window.innerWidth < 600) {
-    var LIGHTBOX_SIDEBAR_WIDTH = window.innerWidth
-} else {
-    var LIGHTBOX_SIDEBAR_WIDTH = 360
-}
+// if (window.innerWidth < 600) {
+//     var LIGHTBOX_SIDEBAR_WIDTH = window.innerWidth
+// } else {
+//     var LIGHTBOX_SIDEBAR_WIDTH = 360
+// }
 
 const customStyles = {
     content : {
@@ -50,7 +50,8 @@ export class AllPhotosHashListViewRV extends Component {
     }
 
     render() {
-        const {fetchingAlbumsDatePhotoHashList,fetchedAlbumsDatePhotoHashList} = this.props
+        // const {fetchingAlbumsDatePhotoHashList,fetchedAlbumsDatePhotoHashList} = this.props
+        const {fetchingAlbumsDatePhotoHashList} = this.props
         return (
             <PhotoListView 
                 title={"Photos"}

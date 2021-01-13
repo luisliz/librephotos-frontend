@@ -21,7 +21,7 @@ import * as moment from "moment";
 import _ from "lodash";
 import LazyLoad from "react-lazyload";
 import { SecuredImageJWT } from "../components/SecuredImage";
-import { LightBox } from "../components/lightBox";
+import { LightBox } from "../components/lightbox/lightBox";
 
 var topMenuHeight = 45; // don't change this
 var ESCAPE_KEY = 27;

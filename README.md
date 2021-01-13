@@ -3,6 +3,10 @@
 
 # LibrePhotos
 
+## Issues in this version 
+
+- Placetree is not working 
+
 ## What is it?
 
 - Self hosted Google Photos clone, with a slight focus on cool graphs

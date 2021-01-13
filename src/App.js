@@ -61,7 +61,7 @@ const noMenubarPaths = ['/signup', '/login'];
 class App extends Component {
 
   render() {
-    const menuSpacing = 0;
+    // const menuSpacing = 0;
     return (
       <ConnectedRouter history={history}>
         <div>

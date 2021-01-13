@@ -6,17 +6,17 @@ import _ from 'lodash'
 import { PhotoListView } from './ReusablePhotoListView'
 
 
-var topMenuHeight = 55 // don't change this
-var ESCAPE_KEY = 27;
-var ENTER_KEY = 13;
-var RIGHT_ARROW_KEY = 39;
-var UP_ARROW_KEY = 38;
-var LEFT_ARROW_KEY = 37;
-var DOWN_ARROW_KEY = 40;
-var DAY_HEADER_HEIGHT = 70
-var leftMenuWidth = 85 // don't change this
-
-var SIDEBAR_WIDTH = 85;
+// var topMenuHeight = 55 // don't change this
+// var ESCAPE_KEY = 27;
+// var ENTER_KEY = 13;
+// var RIGHT_ARROW_KEY = 39;
+// var UP_ARROW_KEY = 38;
+// var LEFT_ARROW_KEY = 37;
+// var DOWN_ARROW_KEY = 40;
+// var DAY_HEADER_HEIGHT = 70
+// var leftMenuWidth = 85 // don't change this
+//
+// var SIDEBAR_WIDTH = 85;
 
 export class HiddenPhotos extends Component {
   state = {

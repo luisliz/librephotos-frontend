@@ -6,18 +6,18 @@ import moment from 'moment'
 import { PhotoListView } from './ReusablePhotoListView'
 
 
-const topMenuHeight = 55 // don't change this
-const ESCAPE_KEY = 27;
-const ENTER_KEY = 13;
-const RIGHT_ARROW_KEY = 39;
-const UP_ARROW_KEY = 38;
-const LEFT_ARROW_KEY = 37;
-const DOWN_ARROW_KEY = 40;
-
-const SIDEBAR_WIDTH = 85;
-
-const DAY_HEADER_HEIGHT = 70
-const leftMenuWidth = 85 // don't change this
+// const topMenuHeight = 55 // don't change this
+// const ESCAPE_KEY = 27;
+// const ENTER_KEY = 13;
+// const RIGHT_ARROW_KEY = 39;
+// const UP_ARROW_KEY = 38;
+// const LEFT_ARROW_KEY = 37;
+// const DOWN_ARROW_KEY = 40;
+//
+// const SIDEBAR_WIDTH = 85;
+//
+// const DAY_HEADER_HEIGHT = 70
+// const leftMenuWidth = 85 // don't change this
 
 
 

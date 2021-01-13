@@ -6,7 +6,7 @@ import {  fetchPhotoDetail } from '../actions/photosActions'
 import { Image, Header, Loader, Icon } from 'semantic-ui-react';
 import { serverAddress } from '../api_client/apiClient'
 // import Lightbox from 'react-image-lightbox';
-import { LightBox } from '../components/lightBox'
+import { LightBox } from '../components/lightbox/lightBox'
 import * as moment from 'moment';
 import debounce from 'lodash/debounce'
 import { PhotoListView } from './ReusablePhotoListView'

@@ -60,7 +60,7 @@ export class SignupPage extends Component {
       lastname,
       email,
       passwordConfirm,
-      serverAddress
+      // serverAddress
     } = this.state;
 
     return (

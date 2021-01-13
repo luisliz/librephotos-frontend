@@ -2,24 +2,15 @@ import React, { Component } from 'react';
 import {
   Form,
   Radio,
-  Label,
-  Step,
-  Progress,
   List,
   Grid,
   Image,
   Icon,
-  Item,
   Header,
   Segment,
-  Accordion,
-  Container,
-  Message,
   Input,
   Button,
-  Loader,
   Table,
-  Dropdown,
   Popup,
   Divider,
 } from 'semantic-ui-react';
@@ -45,7 +36,8 @@ import {fetchUserSelfDetails} from '../actions/userActions';
 import {CountStats} from '../components/statistics';
 import Dropzone from 'react-dropzone';
 import AvatarEditor from 'react-avatar-editor';
-import MaterialIcon, {colorPallet} from 'material-icons-react';
+// import MaterialIcon, {colorPallet} from 'material-icons-react';
+import MaterialIcon from 'material-icons-react';
 import SortableTree from 'react-sortable-tree';
 import FileExplorerTheme from 'react-sortable-tree-theme-file-explorer';
 

@@ -11,17 +11,17 @@ import { fetchPlaceAlbumsList } from "../actions/albumsActions";
 import { Grid, AutoSizer } from "react-virtualized";
 import { countryNames } from "../util/countryNames";
 import { Link } from "react-router-dom";
-import { SecuredImageJWT } from "../components/SecuredImage";
+import { SecuredImageJWT } from "./SecuredImage";
 import _ from "lodash";
 
 
 var topMenuHeight = 45; // don't change this
-var ESCAPE_KEY = 27;
-var ENTER_KEY = 13;
-var RIGHT_ARROW_KEY = 39;
-var UP_ARROW_KEY = 38;
-var LEFT_ARROW_KEY = 37;
-var DOWN_ARROW_KEY = 40;
+// var ESCAPE_KEY = 27;
+// var ENTER_KEY = 13;
+// var RIGHT_ARROW_KEY = 39;
+// var UP_ARROW_KEY = 38;
+// var LEFT_ARROW_KEY = 37;
+// var DOWN_ARROW_KEY = 40;
 
 var SIDEBAR_WIDTH = 85;
 

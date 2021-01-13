@@ -29,8 +29,8 @@ import {
   Icon
 } from "semantic-ui-react";
 import { serverAddress, shareAddress } from "../api_client/apiClient";
-import { LightBox } from "../components/lightBox";
-import { LightBoxV2 } from "../components/LightBoxV2";
+import { LightBox } from "../components/lightbox/lightBox";
+import { LightBoxV2 } from "../components/lightbox/LightBoxV2";
 import debounce from "lodash/debounce";
 import _ from "lodash";
 import * as moment from "moment";
