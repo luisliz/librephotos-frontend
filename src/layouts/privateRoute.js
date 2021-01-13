@@ -8,7 +8,8 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom'
-import {SideMenuNarrow, TopMenu} from './menubars'
+import SideMenuNarrow from "../components/menus/SideMenuNarrow";
+import TopMenu from "../components/menus/TopMenu";
 
 
 var topMenuHeight = 45 // don't change this

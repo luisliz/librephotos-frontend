@@ -4,12 +4,10 @@ import { connect } from "react-redux";
 import { PhotoListView } from "./ReusablePhotoListView";
 import _ from "lodash";
 import moment from "moment";
-import {
-  TopMenu,
-  SideMenuNarrow,
-  TopMenuPublic,
-  SideMenuNarrowPublic
-} from "./menubars";
+import SideMenuNarrow from "../components/menus/SideMenuNarrow";
+import TopMenu from "../components/menus/TopMenu";
+import TopMenuPublic from "../components/menus/TopMenuPublic";
+import SideMenuNarrowPublic from "../components/menus/SideMenuNarrowPublic";
 
 
 var TOP_MENU_HEIGHT = 45; // don't change this

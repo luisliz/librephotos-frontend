@@ -29,7 +29,6 @@ import {AlbumThing} from './layouts/albumThing';
 import {AlbumUser} from './layouts/albumUser';
 import {AlbumUserGallery} from './layouts/albumUserGallery';
 import {AllPhotosHashListViewRV} from './layouts/allPhotosViewHashRV';
-import {SideMenuNarrow, TopMenu} from './layouts/menubars';
 import {NoTimestampPhotosView} from './layouts/noTimestampPhotosView';
 import {RecentlyAddedPhotos} from './layouts/RecentlyAddedPhotos';
 import PrivateRoute from './layouts/privateRoute';
@@ -43,7 +42,8 @@ import {PublicUserList} from './layouts/PublicUserList';
 import {LocationClusterMap} from './components/maps';
 import {SharedToMe} from './layouts/SharedToMe';
 import {SharedFromMe} from './layouts/SharedFromMe';
-
+import TopMenu from "./components/menus/TopMenu";
+import SideMenuNarrow from "./components/menus/SideMenuNarrow";
 
 class Nav extends React.Component {
   render() {

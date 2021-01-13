@@ -749,6 +749,7 @@ export class SideMenuNarrow extends Component {
 
     const { activeItem } = this.state;
     return (
+
       <Menu
         borderless
         icon="labeled"
