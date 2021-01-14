@@ -7,7 +7,9 @@
     <list default="true" id="d55fe26c-9690-459c-9ca5-ecd2b5c623fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/socialGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/socialGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npm-shrinkwrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/npm-shrinkwrap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/FaceDashboardV3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/FaceDashboardV3.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +61,7 @@
       <workItem from="1610416866809" duration="5928000" />
       <workItem from="1610468530173" duration="18558000" />
       <workItem from="1610559419230" duration="26000" />
-      <workItem from="1610559449982" duration="15326000" />
+      <workItem from="1610559449982" duration="18119000" />
     </task>
     <servers />
   </component>
