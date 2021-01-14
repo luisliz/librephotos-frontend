@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Statistic, Icon } from 'semantic-ui-react'
 import { connect } from "react-redux";
-import { fetchCountStats } from '../actions/utilActions'
+import { fetchCountStats } from '../store/actions/utilActions'
 
 
 export class CountStats extends Component {

@@ -22,21 +22,21 @@ import {
   fetchThingAlbumsList,
   fetchUserAlbum,
   fetchUserAlbumsList,
-} from "../../actions/albumsActions";
-import { logout } from "../../actions/authActions";
-import { fetchPeople } from "../../actions/peopleActions";
+} from "../../store/actions/albumsActions";
+import { logout } from "../../store/actions/authActions";
+import { fetchPeople } from "../../store/actions/peopleActions";
 import {
   searchPeople,
   searchPhotos,
   searchPlaceAlbums,
   searchThingAlbums,
-} from "../../actions/searchActions";
-import { toggleSidebar } from "../../actions/uiActions";
+} from "../../store/actions/searchActions";
+import { toggleSidebar } from "../../store/actions/uiActions";
 import {
   fetchCountStats,
   fetchExampleSearchTerms,
   fetchWorkerAvailability,
-} from "../../actions/utilActions";
+} from "../../store/actions/utilActions";
 import { serverAddress } from "../../api_client/apiClient";
 import { SecuredImageJWT } from "../SecuredImage";
 

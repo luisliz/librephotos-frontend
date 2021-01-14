@@ -2,9 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { LoginPage } from '../layouts/loginPage'
-import { login } from  '../actions/authActions'
-import { fetchSiteSettings } from '../actions/utilActions'
-import { authErrors, isRefreshTokenExpired } from '../reducers'
+import { login } from '../store/actions/authActions'
+import { fetchSiteSettings } from '../store/actions/utilActions'
+import { authErrors, isRefreshTokenExpired } from '../store/reducers'
 
 
 const Login = (props) => {

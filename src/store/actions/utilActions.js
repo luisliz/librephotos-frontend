@@ -1,6 +1,6 @@
 import { notify } from "reapop";
-import { Server } from "../api_client/apiClient";
-import { logout } from "../actions/authActions";
+import { Server } from "../../api_client/apiClient";
+import { logout } from "./authActions";
 import { fetchDateAlbumsPhotoHashList } from "./albumsActions";
 import { fetchInferredFacesList, fetchLabeledFacesList } from "./facesActions";
 import { fetchUserSelfDetails} from './userActions' ;

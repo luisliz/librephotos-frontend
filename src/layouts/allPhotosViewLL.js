@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
-import { fetchPhotos } from '../actions/photosActions'
+import { fetchPhotos } from '../store/actions/photosActions'
 
 
 export class AllPhotosViewLL extends Component {

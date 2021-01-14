@@ -8,9 +8,9 @@ import {
   Loader,
   Label
 } from "semantic-ui-react";
-import { fetchPhotosSharedToMe, fetchPhotosSharedFromMe } from "../actions/photosActions";
-import { fetchPublicUserList } from "../actions/publicActions";
-import { fetchUserAlbumsSharedToMe } from "../actions/albumsActions";
+import { fetchPhotosSharedToMe, fetchPhotosSharedFromMe } from "../store/actions/photosActions";
+import { fetchPublicUserList } from "../store/actions/publicActions";
+import { fetchUserAlbumsSharedToMe } from "../store/actions/albumsActions";
 import { connect } from "react-redux";
 import _ from "lodash";
 import { Link } from "react-router-dom";

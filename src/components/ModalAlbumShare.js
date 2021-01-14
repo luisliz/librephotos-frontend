@@ -10,8 +10,8 @@ import {
 } from "semantic-ui-react";
 import { connect } from "react-redux";
 import _ from "lodash";
-import { fetchPublicUserList } from "../actions/publicActions";
-import { setUserAlbumShared } from "../actions/albumsActions";
+import { fetchPublicUserList } from "../store/actions/publicActions";
+import { setUserAlbumShared } from "../store/actions/albumsActions";
 import Modal from "react-modal";
 import moment from "moment";
 

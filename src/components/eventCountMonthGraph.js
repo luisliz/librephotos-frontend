@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Loader, Segment, Header } from 'semantic-ui-react'
 import Dimensions from 'react-dimensions'
 import { connect } from "react-redux";
-import { fetchPhotoMonthCounts } from '../actions/utilActions'
+import { fetchPhotoMonthCounts } from '../store/actions/utilActions'
 import { Chart, Bars, Ticks, Layer } from 'rumble-charts'
 
 

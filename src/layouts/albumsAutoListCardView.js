@@ -10,10 +10,10 @@ import {
 import styles from 'react-virtualized/styles.css'; // only needs to be imported once
 import { Image, Header, Divider, Loader, Dimmer, Popup, Button, Icon, Rating } from 'semantic-ui-react';
 import { connect } from "react-redux";
-import { fetchAutoAlbumsList } from '../actions/albumsActions'
+import { fetchAutoAlbumsList } from '../store/actions/albumsActions'
 import { BrowserRouter as Link } from 'react-router-dom'
-import { generateAutoAlbums } from '../actions/albumsActions'
-import { fetchPhotoScanStatus, fetchAutoAlbumProcessingStatus } from '../actions/utilActions'
+import { generateAutoAlbums } from '../store/actions/albumsActions'
+import { fetchPhotoScanStatus, fetchAutoAlbumProcessingStatus } from '../store/actions/utilActions'
 import { serverAddress } from '../api_client/apiClient'
 
 

@@ -10,7 +10,7 @@ import {
   Popup,
 } from "semantic-ui-react";
 
-import { logout } from "../../actions/authActions";
+import { logout } from "../../store/actions/authActions";
 
 function fuzzy_match(str, pattern) {
   if (pattern.split("").length > 0) {

@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchFavoritePhotos } from '../actions/photosActions';
+import { fetchFavoritePhotos } from '../store/actions/photosActions';
 import moment from 'moment'
 import _ from 'lodash'
 import { PhotoListView } from './ReusablePhotoListView'

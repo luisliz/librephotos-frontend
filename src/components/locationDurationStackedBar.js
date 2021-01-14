@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Label, Segment, Header, Loader } from 'semantic-ui-react'
 import Dimensions from 'react-dimensions'
 import { connect } from "react-redux";
-import { fetchLocationTimeline } from '../actions/utilActions'
+import { fetchLocationTimeline } from '../store/actions/utilActions'
 import moment from 'moment'
 import { Hint, XYPlot, XAxis, HorizontalBarSeries } from 'react-vis'
 

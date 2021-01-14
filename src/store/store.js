@@ -5,7 +5,7 @@ import storage from 'redux-persist/es/storage'
 import { createFilter } from 'redux-persist-transform-filter';
 import { persistReducer, persistStore } from 'redux-persist'
 import rootReducer from "./reducers";
-import history from './history'
+import history from '../history'
 import { routerMiddleware } from 'react-router-redux'
 
 

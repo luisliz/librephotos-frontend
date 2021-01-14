@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { fetchUserPublicPhotos } from "../actions/publicActions";
+import { fetchUserPublicPhotos } from "../store/actions/publicActions";
 import { connect } from "react-redux";
 import { PhotoListView } from "./ReusablePhotoListView";
 import _ from "lodash";

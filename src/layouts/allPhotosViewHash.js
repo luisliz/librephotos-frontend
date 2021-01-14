@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image, Header } from 'semantic-ui-react';
 import { connect } from "react-redux";
-import { fetchDateAlbumsPhotoHashList } from '../actions/albumsActions'
+import { fetchDateAlbumsPhotoHashList } from '../store/actions/albumsActions'
 import { serverAddress } from '../api_client/apiClient'
 import LazyLoad from 'react-lazyload';
 

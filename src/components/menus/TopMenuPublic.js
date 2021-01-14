@@ -8,7 +8,7 @@ import {
     Menu,
 
 } from "semantic-ui-react";
-import {toggleSidebar} from "../../actions/uiActions";
+import {toggleSidebar} from "../../store/actions/uiActions";
 
 
 class TopMenuPublic extends Component {

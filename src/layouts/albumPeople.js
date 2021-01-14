@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchPeopleAlbums } from "../actions/albumsActions";
+import { fetchPeopleAlbums } from "../store/actions/albumsActions";
 import {
   Popup,
   Icon,
@@ -10,7 +10,7 @@ import {
   Loader,
   Button
 } from "semantic-ui-react";
-import { fetchPeople, deletePerson } from "../actions/peopleActions";
+import { fetchPeople, deletePerson } from "../store/actions/peopleActions";
 import { serverAddress } from "../api_client/apiClient";
 import { Grid, AutoSizer } from "react-virtualized";
 import { Link } from "react-router-dom";

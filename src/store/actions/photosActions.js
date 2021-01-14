@@ -1,4 +1,4 @@
-import { Server, serverAddress } from "../api_client/apiClient";
+import { Server, serverAddress } from "../../api_client/apiClient";
 import _ from "lodash";
 import moment from "moment";
 import { notify } from "reapop";

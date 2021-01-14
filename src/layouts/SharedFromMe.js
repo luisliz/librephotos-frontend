@@ -11,9 +11,9 @@ import {
   Button,
   Popup
 } from "semantic-ui-react";
-import { fetchPhotosSharedFromMe } from "../actions/photosActions";
-import { fetchPublicUserList } from "../actions/publicActions";
-import { fetchUserAlbumsSharedFromMe, deleteUserAlbum } from "../actions/albumsActions";
+import { fetchPhotosSharedFromMe } from "../store/actions/photosActions";
+import { fetchPublicUserList } from "../store/actions/publicActions";
+import { fetchUserAlbumsSharedFromMe, deleteUserAlbum } from "../store/actions/albumsActions";
 import { connect } from "react-redux";
 import _ from "lodash";
 import { Link } from "react-router-dom";

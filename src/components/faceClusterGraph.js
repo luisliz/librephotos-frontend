@@ -10,7 +10,7 @@ import {
 import Dimensions from "react-dimensions";
 import { connect } from "react-redux";
 import { serverAddress } from "../api_client/apiClient";
-import { clusterFaces } from "../actions/facesActions";
+import { clusterFaces } from "../store/actions/facesActions";
 import { SecuredImageJWT } from "./SecuredImage";
 
 

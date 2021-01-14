@@ -4,7 +4,7 @@ import { Tree } from "@vx/hierarchy";
 import { LinearGradient } from "@vx/gradient";
 import { hierarchy } from "d3-hierarchy";
 import { pointRadial } from "d3-shape";
-import { fetchLocationSunburst } from "../actions/utilActions";
+import { fetchLocationSunburst } from "../store/actions/utilActions";
 import { connect } from "react-redux";
 import { Form } from "semantic-ui-react";
 

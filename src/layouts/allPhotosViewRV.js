@@ -10,7 +10,7 @@ import {
 import styles from 'react-virtualized/styles.css'; // only needs to be imported once
 import { Image, Header, Divider, Loader, Dimmer, List, Icon } from 'semantic-ui-react';
 import { connect } from "react-redux";
-import { fetchPhotos } from '../actions/photosActions'
+import { fetchPhotos } from '../store/actions/photosActions'
 import { serverAddress } from '../api_client/apiClient'
 import { ChartyPhotosScrollbar } from '../components/chartyPhotosScrollbar'
 

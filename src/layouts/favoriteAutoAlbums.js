@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchAutoAlbumsList } from '../actions/albumsActions'
+import { fetchAutoAlbumsList } from '../store/actions/albumsActions'
 import { AlbumAutoCard } from '../components/album'
 import { Container, Icon, Header, Card } from 'semantic-ui-react'
 import { serverAddress } from '../api_client/apiClient'

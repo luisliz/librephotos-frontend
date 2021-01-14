@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchPeopleAlbums } from '../actions/albumsActions'
+import { fetchPeopleAlbums } from '../store/actions/albumsActions'
 import moment from 'moment'
 import _ from 'lodash'
 import { PhotoListView } from './ReusablePhotoListView'

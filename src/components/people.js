@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Image, Card, Button } from 'semantic-ui-react';
-import { fetchPeople } from '../actions/peopleActions';
+import { fetchPeople } from '../store/actions/peopleActions';
 import { serverAddress } from '../api_client/apiClient'
 
 export class PeopleCardGroup extends Component {

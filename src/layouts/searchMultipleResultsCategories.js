@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Grid, AutoSizer } from 'react-virtualized';
 import 'react-virtualized/styles.css'; // only needs to be imported once
 import { connect } from "react-redux";
-import { fetchPhotoDetail } from '../actions/photosActions'
+import { fetchPhotoDetail } from '../store/actions/photosActions'
 import { Image, Header, Loader, Icon } from 'semantic-ui-react';
 import { serverAddress } from '../api_client/apiClient'
 // import Lightbox from 'react-image-lightbox';

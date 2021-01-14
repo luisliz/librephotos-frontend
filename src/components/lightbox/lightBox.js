@@ -8,7 +8,7 @@ import {
     setPhotosHidden,
     setPhotosPublic,
     generatePhotoIm2txtCaption
-} from "../../actions/photosActions";
+} from "../../store/actions/photosActions";
 import {
     Image,
     Header,
@@ -26,7 +26,7 @@ import {Server, serverAddress, shareAddress} from "../../api_client/apiClient";
 import Lightbox from "react-image-lightbox";
 import {LocationMap} from "../maps";
 import {push} from "react-router-redux";
-import {searchPhotos} from "../../actions/searchActions";
+import {searchPhotos} from "../../store/actions/searchActions";
 
 import * as moment from "moment";
 import {Link} from "react-router-dom";

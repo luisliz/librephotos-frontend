@@ -5,11 +5,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d55fe26c-9690-459c-9ca5-ecd2b5c623fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npm-shrinkwrap.json" beforeDir="false" afterPath="$PROJECT_DIR$/npm-shrinkwrap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/albumsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/albumsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/authActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/facesActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/facesActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/peopleActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/peopleActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/photosActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/photosActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/publicActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/publicActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/searchActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/searchActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/uiActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/uiActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/utilActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/utilActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_client/apiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_client/apiClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_client/apiClientDeploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_client/apiClientDeploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalAlbumShare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalAlbumShare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalPhotosShare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalPhotosShare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/album.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/album.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/countryPiChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/countryPiChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/wordCloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/wordCloud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/egoGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/egoGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/eventCountMonthGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/eventCountMonthGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/faceClusterGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/faceClusterGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/faces.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/faces.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/lightbox/lightBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lightbox/lightBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/locationDurationStackedBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locationDurationStackedBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/locationLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locationLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/maps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/maps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menus/SideMenuNarrow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/SideMenuNarrow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menus/TopMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/TopMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menus/TopMenuPublic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/TopMenuPublic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/people.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/people.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/socialGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/socialGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/statistics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/statistics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/AdminPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/AdminPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/DataVisualization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DataVisualization.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/FaceDashboardV3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/FaceDashboardV3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/FavoritePhotos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/FavoritePhotos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/HiddenPhotos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/HiddenPhotos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/PublicUserList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/PublicUserList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/RVListExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/RVListExample.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/RecentlyAddedPhotos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/RecentlyAddedPhotos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/ReusablePhotoListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/ReusablePhotoListView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/SharedFromMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/SharedFromMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/SharedToMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/SharedToMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/SignUpPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/SignUpPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/UserManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/UserManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/UserPublicPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/UserPublicPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumAuto.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumAuto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumAutoGalleryView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumAutoGalleryView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumAutoMonths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumAutoMonths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumAutoRV.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumAutoRV.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumDateGalleryView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumDateGalleryView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumDateMonths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumDateMonths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumPeople.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumPeople.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumPersonGallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumPersonGallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumPlace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumPlace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumPlaceGallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumPlaceGallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumThing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumThing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumUserGallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumUserGallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/albumsAutoListCardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/albumsAutoListCardView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/allPhotosGroupedByDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/allPhotosGroupedByDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/allPhotosView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/allPhotosView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/allPhotosViewHash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/allPhotosViewHash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/allPhotosViewHashRV.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/allPhotosViewHashRV.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/allPhotosViewLL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/allPhotosViewLL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/allPhotosViewRV.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/allPhotosViewRV.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/favoriteAutoAlbums.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/favoriteAutoAlbums.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/noTimestampPhotosView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/noTimestampPhotosView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/privateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/privateRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/searchMultipleResultsCategories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/searchMultipleResultsCategories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/searchRV.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/searchRV.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/albumsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/albumsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/facesReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/facesReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/peopleReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/peopleReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/photosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/photosReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/publicReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/publicReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/searchReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/searchReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/uiReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/uiReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/userReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/utilReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/utilReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/gridUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/gridUtils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +144,8 @@
       <workItem from="1610416866809" duration="5928000" />
       <workItem from="1610468530173" duration="18558000" />
       <workItem from="1610559419230" duration="26000" />
-      <workItem from="1610559449982" duration="18119000" />
+      <workItem from="1610559449982" duration="18186000" />
+      <workItem from="1610598969376" duration="310000" />
     </task>
     <servers />
   </component>

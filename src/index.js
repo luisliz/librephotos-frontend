@@ -8,7 +8,7 @@ import { CookiesProvider } from 'react-cookie'
 import App from './App';
 import { unregister } from './registerServiceWorker';
 import { Provider } from "react-redux"
-import store from './store'
+import store from './store/store'
 
 
 ReactDOM.render(

@@ -2,7 +2,7 @@
  * @flow
  */
 import React, { PureComponent } from "react";
-import { fetchPhotos } from '../actions/photosActions'
+import { fetchPhotos } from '../store/actions/photosActions'
 import {
   CellMeasurer,
   CellMeasurerCache,

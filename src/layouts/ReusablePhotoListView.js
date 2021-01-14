@@ -6,13 +6,13 @@ import {
   fetchUserAlbumsList,
   editUserAlbum,
   createNewUserAlbum
-} from "../actions/albumsActions";
+} from "../store/actions/albumsActions";
 import {
   fetchPhotoDetail,
   setPhotosFavorite,
   setPhotosHidden,
   setPhotosPublic
-} from "../actions/photosActions";
+} from "../store/actions/photosActions";
 import { copyToClipboard } from "../util/util";
 import { SecuredImageJWT } from "../components/SecuredImage";
 import { ModalPhotosShare } from "../components/ModalPhotosShare";

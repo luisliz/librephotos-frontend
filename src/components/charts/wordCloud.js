@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Header,Loader } from 'semantic-ui-react'
 import Dimensions from 'react-dimensions'
 import { connect } from "react-redux";
-import { fetchWordCloud } from '../../actions/utilActions'
+import { fetchWordCloud } from '../../store/actions/utilActions'
 import { Chart, Transform, Cloud } from 'rumble-charts'
 
 

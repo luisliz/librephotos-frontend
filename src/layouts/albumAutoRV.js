@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchAutoAlbumsList } from "../actions/albumsActions";
+import { fetchAutoAlbumsList } from "../store/actions/albumsActions";
 import { Icon, Header, Image, Card, Loader } from "semantic-ui-react";
 import { Grid, AutoSizer } from "react-virtualized";
 import { serverAddress } from "../api_client/apiClient";

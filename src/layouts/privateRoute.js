@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import * as reducers from '../reducers'
+import * as reducers from '../store/reducers'
 // Router and Switch are needed Breaks site if not in import. DW
 import {
   // BrowserRouter as Router,

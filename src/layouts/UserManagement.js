@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import SortableTree from "react-sortable-tree";
 import FileExplorerTheme from "react-sortable-tree-theme-file-explorer";
 import { Button, Grid, Header, Icon, Input, Loader, Table } from "semantic-ui-react";
-import { fetchDirectoryTree, fetchUserList, manageUpdateUser} from "../actions/utilActions";
+import { fetchDirectoryTree, fetchUserList, manageUpdateUser} from "../store/actions/utilActions";
 
 
 

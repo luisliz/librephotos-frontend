@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchAutoAlbumsList } from "../actions/albumsActions";
+import { fetchAutoAlbumsList } from "../store/actions/albumsActions";
 import { Icon, Header, Loader, Image } from "semantic-ui-react";
 import { Grid, AutoSizer } from "react-virtualized";
 import { serverAddress } from "../api_client/apiClient";
 import LazyLoad from "react-lazyload";
-import { searchPhotos } from "../actions/searchActions";
+import { searchPhotos } from "../store/actions/searchActions";
 import { push } from "react-router-redux";
-import store from "../store";
+import store from "../store/store";
 import { Link } from "react-router-dom";
 import { SecuredImageJWT } from "../components/SecuredImage";
 

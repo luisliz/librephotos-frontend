@@ -4,7 +4,7 @@ import { Image, Header, Dropdown, Divider, Card,
          Container, Button, Icon, Popup, Loader, 
          Dimmer, Statistic, Label, Table } from 'semantic-ui-react';
 import { fetchPeople, 
-         addPerson } from '../actions/peopleActions';
+         addPerson } from '../store/actions/peopleActions';
 import { fetchFaces, 
          fetchLabeledFaces,
          fetchInferredFaces,
@@ -12,7 +12,7 @@ import { fetchFaces,
          fetchFaceToLabel,
          loadFaceToLabel,
          trainFaces,
-         labelFacePersonAndFetchNext} from '../actions/facesActions';
+         labelFacePersonAndFetchNext} from '../store/actions/facesActions';
 import { serverAddress} from '../api_client/apiClient'
 import LazyLoad from 'react-lazyload';
 

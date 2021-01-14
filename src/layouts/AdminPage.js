@@ -25,7 +25,7 @@ import {
   fetchUserList,
   fetchDirectoryTree,
   manageUpdateUser,
-} from '../actions/utilActions';
+} from '../store/actions/utilActions';
 import SortableTree from 'react-sortable-tree';
 import FileExplorerTheme from 'react-sortable-tree-theme-file-explorer';
 

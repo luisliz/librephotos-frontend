@@ -4,7 +4,7 @@ import Gallery from 'react-grid-gallery'
 import VisibilitySensor from 'react-visibility-sensor'
 import { connect } from "react-redux";
 import { BrowserRouter as Link } from 'react-router-dom'
-import { fetchPeopleAlbums, toggleAlbumAutoFavorite } from '../actions/albumsActions'
+import { fetchPeopleAlbums, toggleAlbumAutoFavorite } from '../store/actions/albumsActions'
 import { Map, TileLayer, Marker } from 'react-leaflet'
 import { serverAddress } from '../api_client/apiClient'
 import LazyLoad from 'react-lazyload';

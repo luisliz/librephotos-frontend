@@ -1,4 +1,4 @@
-import {Server} from '../api_client/apiClient'
+import {Server} from '../../api_client/apiClient'
 
 
 export function fetchPeople() {

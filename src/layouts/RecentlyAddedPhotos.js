@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import { fetchRecentlyAddedPhotos } from '../actions/photosActions';
+import { fetchRecentlyAddedPhotos } from '../store/actions/photosActions';
 // import _ from 'lodash'
 import { PhotoListView } from './ReusablePhotoListView'
 

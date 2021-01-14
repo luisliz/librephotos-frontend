@@ -26,13 +26,13 @@ import {
   updateUser,
   fetchNextcloudDirectoryTree,
   fetchJobList,
-} from '../actions/utilActions';
-import {trainFaces} from '../actions/facesActions';
+} from '../store/actions/utilActions';
+import {trainFaces} from '../store/actions/facesActions';
 import {
   scanPhotos,
   scanNextcloudPhotos
-} from '../actions/photosActions';
-import {fetchUserSelfDetails} from '../actions/userActions';
+} from '../store/actions/photosActions';
+import {fetchUserSelfDetails} from '../store/actions/userActions';
 import {CountStats} from '../components/statistics';
 import Dropzone from 'react-dropzone';
 import AvatarEditor from 'react-avatar-editor';

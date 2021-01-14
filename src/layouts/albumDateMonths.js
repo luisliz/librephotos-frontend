@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchDateAlbumsList } from '../actions/albumsActions'
+import { fetchDateAlbumsList } from '../store/actions/albumsActions'
 import { AlbumDateCardPlain, AlbumDateCardPlainPlaceholder } from '../components/album'
 import { Header, Card } from 'semantic-ui-react'
 import LazyLoad from 'react-lazyload';

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Divider } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { fetchWordCloud } from "../actions/utilActions";
+import { fetchWordCloud } from "../store/actions/utilActions";
 import WordCloud from "../components/charts/wordCloud";
 import { LocationLink } from "../components/locationLink";
 import { LocationClusterMap } from "../components/maps";

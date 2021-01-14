@@ -13,10 +13,10 @@ import {
 import { connect } from "react-redux";
 // import {Image} from '../components/authenticatedImage'
 import { BrowserRouter as Link } from "react-router-dom";
-import { fetchAlbumsAutoGalleries } from "../actions/albumsActions";
+import { fetchAlbumsAutoGalleries } from "../store/actions/albumsActions";
 import { Map, TileLayer, Marker } from "react-leaflet";
 import {serverAddress } from "../api_client/apiClient";
-import {fetchPhotoDetail} from "../actions/photosActions";
+import {fetchPhotoDetail} from "../store/actions/photosActions";
 import * as moment from "moment";
 import _ from "lodash";
 import LazyLoad from "react-lazyload";

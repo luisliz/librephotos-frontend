@@ -12,10 +12,10 @@ import {
 } from "semantic-ui-react";
 import { serverAddress } from "../api_client/apiClient";
 import LazyLoad from "react-lazyload";
-import { fetchPlaceAlbumsList } from "../actions/albumsActions";
-import { searchPhotos } from "../actions/searchActions";
+import { fetchPlaceAlbumsList } from "../store/actions/albumsActions";
+import { searchPhotos } from "../store/actions/searchActions";
 import { push } from "react-router-redux";
-import store from "../store";
+import store from "../store/store";
 import { Grid, AutoSizer } from "react-virtualized";
 import { LocationClusterMap } from "../components/maps";
 import { Link } from "react-router-dom";

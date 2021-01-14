@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image, Header, Loader, Dimmer } from 'semantic-ui-react';
 import { connect } from "react-redux";
-import { simpleFetchPhotos } from '../actions/photosActions'
+import { simpleFetchPhotos } from '../store/actions/photosActions'
 import { serverAddress } from '../api_client/apiClient'
 import LazyLoad from 'react-lazyload';
 

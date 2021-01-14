@@ -12,10 +12,10 @@ import {
 import { Grid, AutoSizer } from "react-virtualized";
 import { serverAddress } from "../api_client/apiClient";
 import LazyLoad from "react-lazyload";
-import { fetchUserAlbumsList, deleteUserAlbum } from "../actions/albumsActions";
-import { searchPhotos } from "../actions/searchActions";
+import { fetchUserAlbumsList, deleteUserAlbum } from "../store/actions/albumsActions";
+import { searchPhotos } from "../store/actions/searchActions";
 import { push } from "react-router-redux";
-import store from "../store";
+import store from "../store/store";
 import { Link } from "react-router-dom";
 import { SecuredImageJWT } from "../components/SecuredImage";
 

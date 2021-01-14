@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchNoTimestampPhotoList } from '../actions/photosActions';
+import { fetchNoTimestampPhotoList } from '../store/actions/photosActions';
 import _ from 'lodash'
 import moment from 'moment'
 import { PhotoListView } from './ReusablePhotoListView'

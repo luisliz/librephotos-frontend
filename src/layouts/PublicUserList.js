@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Header, Image, Icon, Grid, Divider } from "semantic-ui-react";
-import { fetchPublicUserList } from "../actions/publicActions";
+import { fetchPublicUserList } from "../store/actions/publicActions";
 import { connect } from "react-redux";
 
 import { Link } from "react-router-dom";

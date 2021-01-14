@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchHiddenPhotos } from '../actions/photosActions';
+import { fetchHiddenPhotos } from '../store/actions/photosActions';
 import moment from 'moment'
 import _ from 'lodash'
 import { PhotoListView } from './ReusablePhotoListView'

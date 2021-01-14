@@ -1,5 +1,5 @@
 import { push } from 'react-router-redux';
-import { Server } from '../api_client/apiClient';
+import { Server } from '../../api_client/apiClient';
 
 export const LOGIN_REQUEST = '@@auth/LOGIN_REQUEST';
 export const LOGIN_SUCCESS = '@@auth/LOGIN_SUCCESS';

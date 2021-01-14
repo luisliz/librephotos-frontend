@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Dimensions from 'react-dimensions'
 import {connect} from "react-redux";
-import {fetchSocialGraph} from '../actions/peopleActions'
+import {fetchSocialGraph} from '../store/actions/peopleActions'
 import {ForceGraph2D, ForceGraph3D} from "react-force-graph";
 import {Loader} from "semantic-ui-react";
 

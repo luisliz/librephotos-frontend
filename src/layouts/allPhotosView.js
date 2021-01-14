@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Image, Header, Loader, Modal } from 'semantic-ui-react';
 import Gallery from 'react-grid-gallery'
 import { connect } from "react-redux";
-import { fetchDateAlbumsList,fetchAlbumsDateGalleries } from '../actions/albumsActions'
+import { fetchDateAlbumsList,fetchAlbumsDateGalleries } from '../store/actions/albumsActions'
 import { serverAddress } from '../api_client/apiClient'
 import LazyLoad from 'react-lazyload';
 import { ModalPhotoViewVertical } from '../components/modalPhotoView';

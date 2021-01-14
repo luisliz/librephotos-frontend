@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Header, Divider, Loader, Dimmer } from 'semantic-ui-react';
 import Gallery from 'react-grid-gallery'
 import { connect } from "react-redux";
-import { fetchAlbumsDateGalleries } from '../actions/albumsActions'
+import { fetchAlbumsDateGalleries } from '../store/actions/albumsActions'
 import { Map, TileLayer, Marker } from 'react-leaflet'
 import { serverAddress } from '../api_client/apiClient'
 

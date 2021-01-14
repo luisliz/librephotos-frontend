@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from "react-redux";
-import { generateAutoAlbums, fetchAutoAlbumsList } from '../actions/albumsActions'
+import { generateAutoAlbums, fetchAutoAlbumsList } from '../store/actions/albumsActions'
 import { AlbumAutoCardPlain, AlbumAutoCardPlainPlaceholder } from '../components/album'
 import { Container, Header, Card } from 'semantic-ui-react'
 import LazyLoad from 'react-lazyload';

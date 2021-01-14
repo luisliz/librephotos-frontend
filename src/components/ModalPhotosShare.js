@@ -3,9 +3,9 @@ import { Input, Image, Icon, Header, Divider, Button } from "semantic-ui-react";
 import { SecuredImageJWT } from "../components/SecuredImage";
 import { connect } from "react-redux";
 import _ from "lodash";
-import { fetchPublicUserList } from "../actions/publicActions";
+import { fetchPublicUserList } from "../store/actions/publicActions";
 import { serverAddress } from "../api_client/apiClient";
-import { setPhotosShared } from "../actions/photosActions";
+import { setPhotosShared } from "../store/actions/photosActions";
 import Modal from "react-modal";
 import moment from "moment";
 

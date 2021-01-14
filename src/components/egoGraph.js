@@ -3,7 +3,7 @@ import { Loader } from 'semantic-ui-react'
 import Dimensions from 'react-dimensions'
 import { connect } from "react-redux";
 import { Graph } from 'react-d3-graph';
-import { fetchEgoGraph } from '../actions/peopleActions'
+import { fetchEgoGraph } from '../store/actions/peopleActions'
 
 
 export class EgoGraph extends Component {

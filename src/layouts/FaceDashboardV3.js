@@ -28,7 +28,7 @@ import {
     trainFaces,
     fetchInferredFacesList,
     fetchLabeledFacesList,
-} from "../actions/facesActions";
+} from "../store/actions/facesActions";
 import _ from "lodash";
 import {
     Grid,
@@ -40,7 +40,7 @@ import {
 } from "../util/gridUtils";
 import {ScrollSpeed, SCROLL_DEBOUNCE_DURATION} from "../util/scrollUtils";
 import debounce from "lodash/debounce";
-import {fetchPeople} from "../actions/peopleActions";
+import {fetchPeople} from "../store/actions/peopleActions";
 import {serverAddress} from "../api_client/apiClient";
 import Modal from "react-modal";
 
