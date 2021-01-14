@@ -20,7 +20,7 @@ import {
     Avatar, Typography
 } from '@material-ui/core'
 
-import {SecuredImageJWT} from "../components/SecuredImage";
+import {SecuredImageJWT} from "../../components/SecuredImage";
 import {connect} from "react-redux";
 import {
     deleteFaces,
@@ -28,7 +28,7 @@ import {
     trainFaces,
     fetchInferredFacesList,
     fetchLabeledFacesList,
-} from "../store/actions/facesActions";
+} from "../../store/actions/facesActions";
 import _ from "lodash";
 import {
     Grid,
@@ -37,11 +37,11 @@ import {
 import {
     calculateFaceGridCellSize,
     calculateFaceGridCells,
-} from "../util/gridUtils";
-import {ScrollSpeed, SCROLL_DEBOUNCE_DURATION} from "../util/scrollUtils";
+} from "../../util/gridUtils";
+import {ScrollSpeed, SCROLL_DEBOUNCE_DURATION} from "../../util/scrollUtils";
 import debounce from "lodash/debounce";
-import {fetchPeople} from "../store/actions/peopleActions";
-import {serverAddress} from "../api_client/apiClient";
+import {fetchPeople} from "../../store/actions/peopleActions";
+import {serverAddress} from "../../api_client/apiClient";
 import Modal from "react-modal";
 
 

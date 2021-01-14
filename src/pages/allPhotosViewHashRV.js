@@ -3,7 +3,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 import { connect } from "react-redux";
 import { fetchDateAlbumsPhotoHashList } from '../store/actions/albumsActions'
 // import _ from 'lodash'
-import { PhotoListView } from './ReusablePhotoListView'
+import { PhotoListView } from '../layouts/ReusablePhotoListView'
 
 
 // var TOP_MENU_HEIGHT = 55 // don't change this

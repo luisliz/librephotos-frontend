@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Divider } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { fetchWordCloud } from "../store/actions/utilActions";
-import WordCloud from "../components/charts/wordCloud";
-import { LocationLink } from "../components/locationLink";
-import { LocationClusterMap } from "../components/maps";
-import EventCountMonthGraph from "../components/eventCountMonthGraph";
-import LocationDurationStackedBar from "../components/locationDurationStackedBar";
-import FaceClusterScatter from "../components/faceClusterGraph";
-import SocialGraph from "../components/socialGraph";
+import { fetchWordCloud } from "../../store/actions/utilActions";
+import { LocationLink } from "../../components/locationLink";
+import {LocationClusterMap} from "../Maps/LocationClusterMap";
+import {WordCloud} from "../../components/charts/wordCloud";
+import {EventCountMonthGraph} from "../../components/eventCountMonthGraph";
+import {LocationDurationStackedBar} from "../../components/locationDurationStackedBar";
+import {SocialGraph} from "../../components/socialGraph";
+import {FaceClusterScatter} from "../../components/faceClusterGraph";
 
 export class LocationTree extends Component {
   render() {

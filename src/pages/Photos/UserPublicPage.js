@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import { fetchUserPublicPhotos } from "../store/actions/publicActions";
+import { fetchUserPublicPhotos } from "../../store/actions/publicActions";
 import { connect } from "react-redux";
-import { PhotoListView } from "./ReusablePhotoListView";
 import _ from "lodash";
 import moment from "moment";
-import SideMenuNarrow from "../components/menus/SideMenuNarrow";
-import TopMenu from "../components/menus/TopMenu";
-import TopMenuPublic from "../components/menus/TopMenuPublic";
-import SideMenuNarrowPublic from "../components/menus/SideMenuNarrowPublic";
+import SideMenuNarrow from "../../components/menus/SideMenuNarrow";
+import TopMenu from "../../components/menus/TopMenu";
+import TopMenuPublic from "../../components/menus/TopMenuPublic";
+import SideMenuNarrowPublic from "../../components/menus/SideMenuNarrowPublic";
+import {PhotoListView} from "../../layouts/ReusablePhotoListView";
 
 
 var TOP_MENU_HEIGHT = 45; // don't change this

@@ -17,11 +17,11 @@ import { searchPhotos } from "../store/actions/searchActions";
 import { push } from "react-router-redux";
 import store from "../store/store";
 import { Grid, AutoSizer } from "react-virtualized";
-import { LocationClusterMap } from "../components/maps";
 import { Link } from "react-router-dom";
 import { SecuredImageJWT } from "../components/SecuredImage";
 import { countryNames } from "../util/countryNames";
 import _ from "lodash";
+import {LocationClusterMap} from "../pages/Maps/LocationClusterMap";
 
 
 var topMenuHeight = 45; // don't change this

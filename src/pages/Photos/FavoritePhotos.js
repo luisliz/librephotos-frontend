@@ -1,46 +1,44 @@
+
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchPeopleAlbums } from '../store/actions/albumsActions'
+import { fetchFavoritePhotos } from '../../store/actions/photosActions';
 import moment from 'moment'
 import _ from 'lodash'
-import { PhotoListView } from './ReusablePhotoListView'
+import {PhotoListView} from "../../layouts/ReusablePhotoListView";
 
 
-// var topMenuHeight = 55 // don't change this
-// var ESCAPE_KEY = 27;
-// var ENTER_KEY = 13;
-// var RIGHT_ARROW_KEY = 39;
-// var UP_ARROW_KEY = 38;
-// var LEFT_ARROW_KEY = 37;
-// var DOWN_ARROW_KEY = 40;
-// var DAY_HEADER_HEIGHT = 70
-// var leftMenuWidth = 85 // don't change this
-//
-// var SIDEBAR_WIDTH = 85;
+var topMenuHeight = 55 // don't change this
+var ESCAPE_KEY = 27;
+var ENTER_KEY = 13;
+var RIGHT_ARROW_KEY = 39;
+var UP_ARROW_KEY = 38;
+var LEFT_ARROW_KEY = 37;
+var DOWN_ARROW_KEY = 40;
+var DAY_HEADER_HEIGHT = 70
+var leftMenuWidth = 85 // don't change this
 
-export class AlbumPersonGallery extends Component {
+var SIDEBAR_WIDTH = 85;
+
+export class FavoritePhotos extends Component {
   state = {
     photosGroupedByDate: [],
     idx2hash: [],
   }
 
   componentDidMount() {
-    if (this.props.people.length === 0){
-      this.props.dispatch(fetchPeopleAlbums(this.props.match.params.albumID))
-    }
+    this.props.dispatch(fetchFavoritePhotos())
   }
 
 
 
   static getDerivedStateFromProps(nextProps,prevState){
-    if (nextProps.albumsPeople.hasOwnProperty(nextProps.match.params.albumID)){
-      const photos = nextProps.albumsPeople[nextProps.match.params.albumID].photos
+      const photos = nextProps.favoritePhotos
       if (prevState.idx2hash.length !== photos.length) {
 
           var t0 = performance.now();
           var groupedByDate = _.groupBy(photos,(el)=>{
               if (el.exif_timestamp) {
-                  return moment.utc(el.exif_timestamp).format('YYYY-MM-DD')
+                  return moment(el.exif_timestamp).format('YYYY-MM-DD')
               } else {
                   return "No Timestamp"
               }
@@ -66,20 +64,18 @@ export class AlbumPersonGallery extends Component {
       } else {
         return null
       }
-    } else {
-      return null
-    }
   }
 
 
 
   render() {
-    const {albumsPeople,fetchingAlbumsPeople,fetchedAlbumsPeople,fetchingPeople} = this.props
+    const {favoritePhotos,fetchingFavoritePhotos,fetchedFavoritePhotos} = this.props
     return (
       <PhotoListView 
-        title={this.props.albumsPeople[this.props.match.params.albumID] ? this.props.albumsPeople[this.props.match.params.albumID].name : "Loading... "}
-        loading={fetchingAlbumsPeople || fetchingPeople}
-        titleIconName={'user'}
+        showHidden={false}
+        title={"Favorite Photos"}
+        loading={fetchingFavoritePhotos}
+        titleIconName={'star'}
         photosGroupedByDate={this.state.photosGroupedByDate}
         idx2hash={this.state.idx2hash}
       />
@@ -464,8 +460,12 @@ export class AlbumPersonGallery extends Component {
 }
 */
 
-AlbumPersonGallery = connect((store)=>{
+FavoritePhotos = connect((store)=>{
   return {
+    favoritePhotos: store.photos.favoritePhotos,
+    fetchingFavoritePhotos: store.photos.fetchingFavoritePhotos,
+    fetchedFavoritePhotos: store.photos.fetchedFavoritePhotos,
+
     albumsPeople: store.albums.albumsPeople,
     fetchingAlbumsPeople: store.albums.fetchingAlbumsPeople,
     fetchedAlbumsPeople: store.albums.fetchedAlbumsPeople,
@@ -476,4 +476,4 @@ AlbumPersonGallery = connect((store)=>{
     fetchingPhotoDetail: store.photos.fetchingPhotoDetail,
     fetchedPhotoDetail: store.photos.fetchedPhotoDetail,
   }
-})(AlbumPersonGallery)
+})(FavoritePhotos)

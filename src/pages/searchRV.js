@@ -9,7 +9,7 @@ import { serverAddress } from '../api_client/apiClient'
 import { LightBox } from '../components/lightbox/lightBox'
 import * as moment from 'moment';
 import debounce from 'lodash/debounce'
-import { PhotoListView } from './ReusablePhotoListView'
+import {PhotoListView} from "../layouts/ReusablePhotoListView";
 
 
 var TOP_MENU_HEIGHT = 55 // don't change this

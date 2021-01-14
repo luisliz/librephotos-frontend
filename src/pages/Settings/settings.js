@@ -4,7 +4,6 @@ import {
   Radio,
   List,
   Grid,
-  Image,
   Icon,
   Header,
   Segment,
@@ -26,14 +25,14 @@ import {
   updateUser,
   fetchNextcloudDirectoryTree,
   fetchJobList,
-} from '../store/actions/utilActions';
-import {trainFaces} from '../store/actions/facesActions';
+} from '../../store/actions/utilActions';
+import {trainFaces} from '../../store/actions/facesActions';
 import {
   scanPhotos,
   scanNextcloudPhotos
-} from '../store/actions/photosActions';
-import {fetchUserSelfDetails} from '../store/actions/userActions';
-import {CountStats} from '../components/statistics';
+} from '../../store/actions/photosActions';
+import {fetchUserSelfDetails} from '../../store/actions/userActions';
+import {CountStats} from '../../components/statistics';
 import Dropzone from 'react-dropzone';
 import AvatarEditor from 'react-avatar-editor';
 // import MaterialIcon, {colorPallet} from 'material-icons-react';

@@ -15,33 +15,35 @@ import {
   PhotoMap,
   Timeline,
   WordClouds,
-} from './layouts/DataVisualization';
-import {FaceDashboard} from './layouts/FaceDashboardV3';
-import {FavoritePhotos} from './layouts/FavoritePhotos';
-import {HiddenPhotos} from './layouts/HiddenPhotos';
-import {SignupPage} from './layouts/SignUpPage';
-import {AlbumAutoGalleryView} from './layouts/albumAutoGalleryView';
-import {AlbumAuto} from './layouts/albumAuto';
-import {AlbumPeople} from './layouts/albumPeople';
-import {AlbumPersonGallery} from './layouts/albumPersonGallery';
-import {AlbumPlaceGallery} from './layouts/albumPlaceGallery';
-import {AlbumThing} from './layouts/albumThing';
-import {AlbumUser} from './layouts/albumUser';
-import {AlbumUserGallery} from './layouts/albumUserGallery';
-import {AllPhotosHashListViewRV} from './layouts/allPhotosViewHashRV';
-import {NoTimestampPhotosView} from './layouts/noTimestampPhotosView';
-import {RecentlyAddedPhotos} from './layouts/RecentlyAddedPhotos';
+} from './pages/Data/DataVisualization'
+import {FaceDashboard} from './pages/Data/FaceDashboardV3';
+import {FavoritePhotos} from './pages/Photos/FavoritePhotos';
+import {HiddenPhotos} from './pages/Photos/HiddenPhotos';
+import {SignupPage} from './pages/Auth/SignUpPage';
+import {AlbumAutoGalleryView} from './pages/albumAutoGalleryView';
+
+import {AlbumAuto} from './pages/Albums/albumAuto';
+import {AlbumPeople} from './pages/Albums/albumPeople';
+import {AlbumThing} from './pages/Albums/albumThing';
+import {AlbumUser} from './pages/Albums/albumUser';
+import {LocationClusterMap} from './pages/Maps/LocationClusterMap';
+import {AllPhotosHashListViewRV} from './pages/allPhotosViewHashRV';
+
+import {AlbumPersonGallery} from './pages/albumPersonGallery';
+import {AlbumPlaceGallery} from './pages/Albums/albumPlaceGallery';
+import {AlbumUserGallery} from './pages/albumUserGallery';
+import {NoTimestampPhotosView} from './pages/Photos/noTimestampPhotosView';
+import {RecentlyAddedPhotos} from './pages/Photos/RecentlyAddedPhotos';
 import PrivateRoute from './layouts/privateRoute';
-import {SearchView} from './layouts/searchRV';
-import {Settings} from './layouts/settings';
-import {AdminPage} from './layouts/AdminPage';
-import {Statistics} from './layouts/statistics';
-import {SecuredImage} from './layouts/Bench';
-import {UserPublicPage} from './layouts/UserPublicPage';
-import {PublicUserList} from './layouts/PublicUserList';
-import {LocationClusterMap} from './components/maps';
-import {SharedToMe} from './layouts/SharedToMe';
-import {SharedFromMe} from './layouts/SharedFromMe';
+import {SearchView} from './pages/searchRV';
+import {Settings} from './pages/Settings/settings';
+import {AdminPage} from './pages/AdminPage';
+import {Statistics} from './pages/Data/statistics';
+import {SecuredImage} from './pages/Bench';
+import {UserPublicPage} from './pages/Photos/UserPublicPage';
+import {PublicUserList} from './pages/Sharing/PublicUserList';
+import {SharedToMe} from './pages/Sharing/SharedToMe';
+import {SharedFromMe} from './pages/Sharing/SharedFromMe';
 import TopMenu from "./components/menus/TopMenu";
 import SideMenuNarrow from "./components/menus/SideMenuNarrow";
 
@@ -79,84 +81,55 @@ class App extends Component {
           )}
 
           <Switch>
-            <PrivateRoute exact path="/" component={AllPhotosHashListViewRV} />
-
+            {/* Authentication */}
             <Route path="/login" component={Login} />
-
             <Route path="/signup" component={SignupPage} />
 
-            <Route path="/public" component={UserPublicPage} />
-
-            <Route path="/users" component={PublicUserList} />
-
+            {/* Photos */}
+            <PrivateRoute exact path="/" component={AllPhotosHashListViewRV} />
+            <PrivateRoute path="/notimestamp" component={NoTimestampPhotosView}/>
+            <PrivateRoute path="/recent" component={RecentlyAddedPhotos} />
+            <PrivateRoute path="/hidden" component={HiddenPhotos} />
+            <PrivateRoute path="/favorites" component={FavoritePhotos} />
             <Route path="/user/:username" component={UserPublicPage} />
 
+            {/* Albums */}
+            <PrivateRoute path="/useralbums" component={AlbumUser} />
+            <PrivateRoute path="/people" component={AlbumPeople} />
+            <PrivateRoute path="/events" component={AlbumAuto} />
+            <PrivateRoute path="/places" component={LocationClusterMap} />
             <PrivateRoute path="/things" component={AlbumThing} />
 
-            <PrivateRoute path="/recent" component={RecentlyAddedPhotos} />
-
-            <PrivateRoute path="/favorites" component={FavoritePhotos} />
-
-            <PrivateRoute path="/hidden" component={HiddenPhotos} />
-
-            <PrivateRoute
-              path="/notimestamp"
-              component={NoTimestampPhotosView}
-            />
-
-            <PrivateRoute path="/useralbums" component={AlbumUser} />
-
-            <PrivateRoute path="/places" component={LocationClusterMap} />
-
-            <PrivateRoute path="/people" component={AlbumPeople} />
-
-            <PrivateRoute path="/events" component={AlbumAuto} />
-
-            <PrivateRoute path="/statistics" component={Statistics} />
-
-            <PrivateRoute path="/settings" component={Settings} />
-
-            <PrivateRoute path="/faces" component={FaceDashboard} />
-
-            <PrivateRoute path="/search" component={SearchView} />
-
-            <PrivateRoute path="/bench" component={SecuredImage} />
-
-            <PrivateRoute
-              path="/person/:albumID"
-              component={AlbumPersonGallery}
-            />
-
-            <PrivateRoute
-              path="/place/:albumID"
-              component={AlbumPlaceGallery}
-            />
-
-            <PrivateRoute
-              path="/event/:albumID"
-              component={AlbumAutoGalleryView}
-            />
-
-            <PrivateRoute
-              path="/useralbum/:albumID"
-              component={AlbumUserGallery}
-            />
-
-            <PrivateRoute path="/shared/tome/:which" component={SharedToMe} />
-            <PrivateRoute
-              path="/shared/fromme/:which"
-              component={SharedFromMe}
-            />
-
-            <PrivateRoute path="/admin" component={AdminPage} />
-
-            <PrivateRoute path="/map" component={PhotoMap} />
+            {/* Data Visualization */}
             <PrivateRoute path="/placetree" component={LocationTree} />
             <PrivateRoute path="/wordclouds" component={WordClouds} />
             <PrivateRoute path="/timeline" component={Timeline} />
             <PrivateRoute path="/socialgraph" component={Graph} />
             <PrivateRoute path="/facescatter" component={FaceScatter} />
+            <PrivateRoute path="/statistics" component={Statistics} />
+
+            {/* Sharing */}
+            <Route path="/users" component={PublicUserList} />
+            <PrivateRoute path="/shared/tome/:which" component={SharedToMe} />
+            <PrivateRoute path="/shared/fromme/:which" component={SharedFromMe} />
+
+            {/* Dashboards */}
+            <PrivateRoute path="/settings" component={Settings} />
+            <PrivateRoute path="/faces" component={FaceDashboard} />
+
+            {/* This is a component why link */}
             <PrivateRoute path="/countstats" component={CountStats} />
+
+            {/* Others */}
+            <Route path="/public" component={UserPublicPage} />
+            <PrivateRoute path="/search" component={SearchView} />
+            <PrivateRoute path="/bench" component={SecuredImage} />
+            <PrivateRoute path="/admin" component={AdminPage} />
+            <PrivateRoute path="/map" component={PhotoMap} />
+            <PrivateRoute path="/person/:albumID" component={AlbumPersonGallery} />
+            <PrivateRoute path="/place/:albumID" component={AlbumPlaceGallery} />
+            <PrivateRoute path="/event/:albumID" component={AlbumAutoGalleryView} />
+            <PrivateRoute path="/useralbum/:albumID" component={AlbumUserGallery} />
           </Switch>
         </div>
       </ConnectedRouter>

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchHiddenPhotos } from '../store/actions/photosActions';
+import { fetchPeopleAlbums } from '../store/actions/albumsActions'
 import moment from 'moment'
 import _ from 'lodash'
-import { PhotoListView } from './ReusablePhotoListView'
+import {PhotoListView} from "../layouts/ReusablePhotoListView";
 
 
 // var topMenuHeight = 55 // don't change this
@@ -18,26 +18,29 @@ import { PhotoListView } from './ReusablePhotoListView'
 //
 // var SIDEBAR_WIDTH = 85;
 
-export class HiddenPhotos extends Component {
+export class AlbumPersonGallery extends Component {
   state = {
     photosGroupedByDate: [],
     idx2hash: [],
   }
 
   componentDidMount() {
-    this.props.dispatch(fetchHiddenPhotos())
+    if (this.props.people.length === 0){
+      this.props.dispatch(fetchPeopleAlbums(this.props.match.params.albumID))
+    }
   }
 
 
 
   static getDerivedStateFromProps(nextProps,prevState){
-      const photos = nextProps.hiddenPhotos
+    if (nextProps.albumsPeople.hasOwnProperty(nextProps.match.params.albumID)){
+      const photos = nextProps.albumsPeople[nextProps.match.params.albumID].photos
       if (prevState.idx2hash.length !== photos.length) {
 
           var t0 = performance.now();
           var groupedByDate = _.groupBy(photos,(el)=>{
               if (el.exif_timestamp) {
-                  return moment(el.exif_timestamp).format('YYYY-MM-DD')
+                  return moment.utc(el.exif_timestamp).format('YYYY-MM-DD')
               } else {
                   return "No Timestamp"
               }
@@ -63,18 +66,20 @@ export class HiddenPhotos extends Component {
       } else {
         return null
       }
+    } else {
+      return null
+    }
   }
 
 
 
   render() {
-    const {hiddenPhotos,fetchingHiddenPhotos,fetchedHiddenPhotos} = this.props
+    const {albumsPeople,fetchingAlbumsPeople,fetchedAlbumsPeople,fetchingPeople} = this.props
     return (
       <PhotoListView 
-        showHidden={true}
-        title={"Hidden Photos"}
-        loading={fetchingHiddenPhotos}
-        titleIconName={'hide'}
+        title={this.props.albumsPeople[this.props.match.params.albumID] ? this.props.albumsPeople[this.props.match.params.albumID].name : "Loading... "}
+        loading={fetchingAlbumsPeople || fetchingPeople}
+        titleIconName={'user'}
         photosGroupedByDate={this.state.photosGroupedByDate}
         idx2hash={this.state.idx2hash}
       />
@@ -459,16 +464,8 @@ export class AlbumPersonGallery extends Component {
 }
 */
 
-HiddenPhotos = connect((store)=>{
+AlbumPersonGallery = connect((store)=>{
   return {
-    favoritePhotos: store.photos.favoritePhotos,
-    fetchingFavoritePhotos: store.photos.fetchingFavoritePhotos,
-    fetchedFavoritePhotos: store.photos.fetchedFavoritePhotos,
-
-    hiddenPhotos: store.photos.hiddenPhotos,
-    fetchingHiddenPhotos: store.photos.fetchingHiddenPhotos,
-    fetchedHiddenPhotos: store.photos.fetchedHiddenPhotos,
-
     albumsPeople: store.albums.albumsPeople,
     fetchingAlbumsPeople: store.albums.fetchingAlbumsPeople,
     fetchedAlbumsPeople: store.albums.fetchedAlbumsPeople,
@@ -479,4 +476,4 @@ HiddenPhotos = connect((store)=>{
     fetchingPhotoDetail: store.photos.fetchingPhotoDetail,
     fetchedPhotoDetail: store.photos.fetchedPhotoDetail,
   }
-})(HiddenPhotos)
+})(AlbumPersonGallery)

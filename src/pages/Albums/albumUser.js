@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchAutoAlbumsList } from "../store/actions/albumsActions";
-import { Icon, Header, Loader, Image } from "semantic-ui-react";
+import {
+  Icon,
+  Header,
+  Button,
+  Loader,
+  Popup,
+  Image,
+  Divider
+} from "semantic-ui-react";
 import { Grid, AutoSizer } from "react-virtualized";
-import { serverAddress } from "../api_client/apiClient";
+import { serverAddress } from "../../api_client/apiClient";
 import LazyLoad from "react-lazyload";
-import { searchPhotos } from "../store/actions/searchActions";
+import { fetchUserAlbumsList, deleteUserAlbum } from "../../store/actions/albumsActions";
+import { searchPhotos } from "../../store/actions/searchActions";
 import { push } from "react-router-redux";
-import store from "../store/store";
+import store from "../../store/store";
 import { Link } from "react-router-dom";
-import { SecuredImageJWT } from "../components/SecuredImage";
+import { SecuredImageJWT } from "../../components/SecuredImage";
 
 
 var topMenuHeight = 45; // don't change this
@@ -22,7 +30,7 @@ var DOWN_ARROW_KEY = 40;
 
 var SIDEBAR_WIDTH = 85;
 
-export class AlbumAuto extends Component {
+export class AlbumUser extends Component {
   constructor() {
     super();
     this.setState({
@@ -36,9 +44,9 @@ export class AlbumAuto extends Component {
 
   componentWillMount() {
     this.calculateEntrySquareSize();
-    window.addEventListener("resize", this.calculateEntrySquareSize);
-    if (this.props.albumsAutoList.length === 0) {
-      this.props.dispatch(fetchAutoAlbumsList());
+    window.addEventListener("resize", this.calculateEntrySquareSize.bind(this));
+    if (this.props.albumsUserList.length === 0) {
+      this.props.dispatch(fetchUserAlbumsList());
     }
   }
 
@@ -68,27 +76,30 @@ export class AlbumAuto extends Component {
   }
 
   cellRenderer = ({ columnIndex, key, rowIndex, style }) => {
-    var albumAutoIndex =
+    var albumUserIndex =
       rowIndex * this.state.numEntrySquaresPerRow + columnIndex;
-    if (albumAutoIndex < this.props.albumsAutoList.length) {
+    if (albumUserIndex < this.props.albumsUserList.length) {
       return (
         <div key={key} style={style}>
           <div
             onClick={() => {
+                //todo
             }}
             style={{ padding: 5 }}
           >
             <SecuredImageJWT
-              label={{ as: 'a', corner: 'left', icon: 'wizard' }}
+              label={{ as: 'a', corner: 'left', icon: 'bookmark', color: 'red' }}
               style={{ display: "inline-block" }}
               as={Link}
-              to={`/event/${this.props.albumsAutoList[albumAutoIndex].id}`}
+              to={`/useralbum/${this.props.albumsUserList[albumUserIndex].id}`}
               width={this.state.entrySquareSize - 10}
               height={this.state.entrySquareSize - 10}
               src={
                 serverAddress +
                 "/media/square_thumbnails/" +
-                this.props.albumsAutoList[albumAutoIndex].photos[0]+".jpg"
+                this.props.albumsUserList[albumUserIndex].cover_photos[0]
+                  .image_hash +
+                ".jpg"
               }
             />
           </div>
@@ -96,8 +107,62 @@ export class AlbumAuto extends Component {
             className="personCardName"
             style={{ paddingLeft: 15, paddingRight: 15, height: 50 }}
           >
-            <b>{this.props.albumsAutoList[albumAutoIndex].title}</b> <br />
-            {this.props.albumsAutoList[albumAutoIndex].photos.length} Photo(s)
+            
+            {
+              this.props.albumsUserList[albumUserIndex].shared_to.length>0 && 
+              <Popup 
+                style={{padding:10}}
+                size='tiny'
+                position='center right'
+                header='Shared with:'
+                trigger={<Icon name='users'/>}
+                content={
+                  this.props.albumsUserList[albumUserIndex].shared_to.map(el=>{
+                    return <div><Icon name='user circle'/><b>{el.username}</b></div>
+                  })
+                }/>
+
+            }
+            <b>{this.props.albumsUserList[albumUserIndex].title}</b> <br />
+            {this.props.albumsUserList[albumUserIndex].photo_count} Photo(s)
+            {true && (
+              <div
+                className="personRemoveButton"
+                style={{ right: 0, position: "absolute" }}
+              >
+                <Popup
+                  wide="very"
+                  hoverable
+                  flowing
+                  trigger={<Icon color="grey" name="remove" />}
+                  content={
+                    <div style={{ textAlign: "center" }}>
+                      Are you sure you want to delete{" "}
+                      <b>{this.props.albumsUserList[albumUserIndex].title}</b>?<br />
+                      This action cannot be undone!<br />
+                      <Divider />
+                      <div>
+                        <Button
+                          onClick={() =>
+                            this.props.dispatch(
+                              deleteUserAlbum(
+                                this.props.albumsUserList[albumUserIndex].id,
+                                this.props.albumsUserList[albumUserIndex].title
+                              )
+                            )
+                          }
+                          negative
+                        >
+                          Yes
+                        </Button>
+                      </div>
+                    </div>
+                  }
+                  on="focus"
+                  position="bottom center"
+                />
+              </div>
+            )}
           </div>
         </div>
       );
@@ -113,16 +178,16 @@ export class AlbumAuto extends Component {
       <div>
         <div style={{ height: 60, paddingTop: 10 }}>
           <Header as="h2">
-            <Icon name="wizard" />
+            <Icon name="bookmark" />
             <Header.Content>
-              Events{" "}
+              My Albums{" "}
               <Loader
                 size="tiny"
                 inline
-                active={this.props.fetchingAlbumsAutoList}
+                active={this.props.fetchingAlbumsUserList}
               />
               <Header.Subheader>
-                Showing {this.props.albumsAutoList.length} Auto created albums
+                Showing {this.props.albumsUserList.length} user created albums
               </Header.Subheader>
             </Header.Content>
           </Header>
@@ -140,9 +205,9 @@ export class AlbumAuto extends Component {
               columnWidth={this.state.entrySquareSize}
               columnCount={this.state.numEntrySquaresPerRow}
               height={this.state.height - topMenuHeight - 60}
-              rowHeight={this.state.entrySquareSize + 120}
+              rowHeight={this.state.entrySquareSize + 60}
               rowCount={Math.ceil(
-                this.props.albumsAutoList.length /
+                this.props.albumsUserList.length /
                   this.state.numEntrySquaresPerRow.toFixed(1)
               )}
               width={width}
@@ -201,113 +266,10 @@ export class EntrySquare extends Component {
   }
 }
 
-AlbumAuto = connect(store => {
+AlbumUser = connect(store => {
   return {
-    auth: store.auth,
-    albumsAutoList: store.albums.albumsAutoList,
-    fetchingAlbumsAutoList: store.albums.fetchingAlbumsAutoList,
-    fetchedAlbumsAutoList: store.albums.fetchedAlbumsAutoList
+    albumsUserList: store.albums.albumsUserList,
+    fetchingAlbumsUserList: store.albums.fetchingAlbumsUserList,
+    fetchedAlbumsUserList: store.albums.fetchedAlbumsUserList
   };
-})(AlbumAuto);
-
-
-// import React, { Component } from "react";
-// import { connect } from "react-redux";
-// import {
-//   fetchPeopleAlbums,
-//   fetchAutoAlbums,
-//   generateAutoAlbums,
-//   fetchAutoAlbumsList
-// } from "../actions/albumsActions";
-// import { AlbumAutoCard, AlbumAutoGallery } from "../components/album";
-// import {
-//   Container,
-//   Icon,
-//   Header,
-//   Button,
-//   Card,
-//   Label,
-//   Popup
-// } from "semantic-ui-react";
-// import {
-//   fetchCountStats,
-//   fetchPhotoScanStatus,
-//   fetchAutoAlbumProcessingStatus
-// } from "../actions/utilActions";
-// import { SecuredImageJWT } from "../components/SecuredImage";
-
-// import { Server, serverAddress } from "../api_client/apiClient";
-
-// export class AlbumAuto extends Component {
-//   componentWillMount() {
-//     this.props.dispatch(fetchAutoAlbumsList());
-//     var _dispatch = this.props.dispatch;
-//     var intervalId = setInterval(function() {
-//       _dispatch(fetchPhotoScanStatus());
-//       _dispatch(fetchAutoAlbumProcessingStatus());
-//     }, 2000);
-//     this.setState({ intervalId: intervalId });
-//   }
-
-//   componentWillUnmount() {
-//     clearInterval(this.state.intervalId);
-//   }
-
-//   handleAutoAlbumGen = e => this.props.dispatch(generateAutoAlbums());
-
-//   render() {
-//     if (this.props.fetchedAlbumsAutoList) {
-//       var match = this.props.match;
-//       var mappedAlbumCards = this.props.albumsAutoList.map(function(album) {
-//         var albumTitle = album.title;
-//         var albumDate = album.timestamp.split("T")[0];
-//         try {
-//           var albumCoverURL = album.cover_photo_url;
-//         } catch (err) {
-//           console.log(err);
-//           var albumCoverURL = null;
-//         }
-//         return (
-//           <AlbumAutoCard
-//             match={match}
-//             key={"album-auto-" + album.id}
-//             albumTitle={albumTitle}
-//             timestamp={albumDate}
-//             people={album.people}
-//             album_id={album.id}
-//             albumCoverURL={serverAddress + albumCoverURL}
-//             photoCount={album.photo_count}
-//           />
-//         );
-//       });
-//     } else {
-//       var mappedAlbumCards = null;
-//     }
-
-//     return (
-//       <div>
-//         <Card.Group stackable itemsPerRow={this.props.itemsPerRow}>
-//           {mappedAlbumCards}
-//         </Card.Group>
-//       </div>
-//     );
-//   }
-// }
-
-// AlbumAuto = connect(store => {
-//   return {
-//     albumsAuto: store.albums.albumsAuto,
-//     fetchingAlbumsAuto: store.albums.fetchingAlbumsAuto,
-//     fetchedAlbumsAuto: store.albums.fetchedAlbumsAuto,
-
-//     albumsAutoList: store.albums.albumsAutoList,
-//     fetchingAlbumsAutoList: store.albums.fetchingAlbumsAutoList,
-//     fetchedAlbumsAutoList: store.albums.fetchedAlbumsAutoList,
-
-//     generatingAlbumsAuto: store.albums.generatingAlbumsAuto,
-//     generatedAlbumsAuto: store.albums.generatedAlbumsAuto,
-//     statusAutoAlbumProcessing: store.util.statusAutoAlbumProcessing,
-//     statusPhotoScan: store.util.statusPhotoScan,
-//     scanningPhotos: store.photos.scanningPhotos
-//   };
-// })(AlbumAuto);
+})(AlbumUser);

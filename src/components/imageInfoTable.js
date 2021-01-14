@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Table, Header, Divider, Rating, Grid, List } from 'semantic-ui-react'
+import {LocationMap} from "../pages/Maps/LocationMap";
 // import { connect } from "react-redux";
-import { LocationMap } from "./maps"
 
 export class ImageInfoTable extends Component {
 	render() {

@@ -24,12 +24,12 @@ import {
 } from "semantic-ui-react";
 import {Server, serverAddress, shareAddress} from "../../api_client/apiClient";
 import Lightbox from "react-image-lightbox";
-import {LocationMap} from "../maps";
 import {push} from "react-router-redux";
 import {searchPhotos} from "../../store/actions/searchActions";
 
 import * as moment from "moment";
 import {Link} from "react-router-dom";
+import {LocationMap} from "../../pages/Maps/LocationMap";
 
 // var topMenuHeight = 55; // don't change this
 // var leftMenuWidth = 85; // don't change this

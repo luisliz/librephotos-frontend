@@ -9,7 +9,7 @@ import {
   Form
 } from "semantic-ui-react";
 import { connect } from "react-redux";
-import {signup} from "../store/actions/authActions";
+import {signup} from "../../store/actions/authActions";
 
 
 export class SignupPage extends Component {

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import { fetchRecentlyAddedPhotos } from '../store/actions/photosActions';
+import { fetchRecentlyAddedPhotos } from '../../store/actions/photosActions';
+import {PhotoListView} from "../../layouts/ReusablePhotoListView";
 // import _ from 'lodash'
-import { PhotoListView } from './ReusablePhotoListView'
 
 
 // var topMenuHeight = 55 // don't change this

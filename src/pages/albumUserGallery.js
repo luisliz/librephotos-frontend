@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchUserAlbum } from "../store/actions/albumsActions";
 import _ from "lodash";
 import moment from "moment";
-import { PhotoListView } from "./ReusablePhotoListView";
+import {PhotoListView} from "../layouts/ReusablePhotoListView";
 
 
 // var topMenuHeight = 45; // don't change this
